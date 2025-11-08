@@ -1,26 +1,34 @@
 using System;
+using System.Collections.Concurrent;
 
 class Program
 {
     static void Main(string[] args)
     {
-        int magicNumber = 6;
+        Random randomGenerator = new Random(); 
+        int magicNumber = randomGenerator.Next(1,100);
+        Boolean Correct = false;
 
-        Console.WriteLine("What is the magic number? 6 ");
-        Console.Write("What is your guess? ");
-        int userNumber = int.Parse(Console.ReadLine());
+        do
+        {
 
-        if (userNumber == magicNumber)
-        {
-            Console.Write("You guessed it!");
-        }
-        else if (userNumber < magicNumber)
-        {
-            Console.WriteLine("Higher.");
-        }
-        else
-        {
-            Console.WriteLine("Lower.");
-        }
+            Console.WriteLine($"What is the magic number? {magicNumber} ");
+            Console.Write("What is your guess? ");
+            int userNumber = int.Parse(Console.ReadLine());
+
+            if (userNumber < magicNumber)
+            {
+                Console.WriteLine("Higher.");
+            }
+            else if (userNumber > magicNumber)
+            {
+                Console.WriteLine("Lower.");
+            }
+            else
+            {
+                Console.Write("You guessed it!");
+                Correct = true;
+            }
+        } while (Correct == false);
     }
 }
