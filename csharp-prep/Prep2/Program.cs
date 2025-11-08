@@ -37,7 +37,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Unfoutunately, you did not pass this class. We encourage you to try again.");
+            Console.WriteLine("Unfortunately, you did not pass this class. We encourage you to try again.");
         }
 
     }
