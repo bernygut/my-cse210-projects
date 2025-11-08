@@ -28,5 +28,14 @@ class Program
             Console.WriteLine("Your grade is an F.");
         }
 
+        if (grade >= 70)
+        {
+            Console.WriteLine("Congratulations! You have passed this class.");
+        }
+        else
+        {
+            Console.WriteLine("Unfoutunately, you did not pass this class. We encourage you to try again.");
+        }
+
     }
 }
